@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mahdiarakbarzadeh.netlify.app/sitemap.xml
