@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="100%" height="100%">
+  <defs>
+    <!-- Soft Glow for Output Node in Light Mode -->
+    <filter id="output-glow-light" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Light Mode Container with Subtle Border for Dark Browser Tabs -->
+  <rect width="32" height="32" rx="7" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+
+  <!-- Layer Connections (Weights) -->
+  <g stroke="#3B82F6" stroke-width="1.5" stroke-opacity="0.3" stroke-linecap="round">
+    <!-- Input (X: 7) to Hidden (X: 16) -->
+    <line x1="7" y1="10" x2="16" y2="7" />
+    <line x1="7" y1="10" x2="16" y2="16" />
+    <line x1="7" y1="10" x2="16" y2="25" />
+    
+    <line x1="7" y1="22" x2="16" y2="7" />
+    <line x1="7" y1="22" x2="16" y2="16" />
+    <line x1="7" y1="22" x2="16" y2="25" />
+
+    <!-- Hidden (X: 16) to Output (X: 25) -->
+    <line x1="16" y1="7"  x2="25" y2="16" stroke="#2563EB" stroke-opacity="0.5" />
+    <line x1="16" y1="16" x2="25" y2="16" stroke="#2563EB" stroke-opacity="0.8" stroke-width="2" />
+    <line x1="16" y1="25" x2="25" y2="16" stroke="#2563EB" stroke-opacity="0.5" />
+  </g>
+
+  <!-- Input Nodes (X: 7) - Slate Blue -->
+  <circle cx="7" cy="10" r="2.2" fill="#60A5FA" />
+  <circle cx="7" cy="22" r="2.2" fill="#60A5FA" />
+
+  <!-- Hidden Layer Nodes (X: 16) - Deep Accent Blue -->
+  <circle cx="16" cy="7"  r="2.2" fill="#2563EB" />
+  <circle cx="16" cy="16" r="2.2" fill="#2563EB" />
+  <circle cx="16" cy="25" r="2.2" fill="#2563EB" />
+
+  <!-- Output Node / Prediction (X: 25) - Vibrant Cobalt/Cyan Glow -->
+  <circle cx="25" cy="16" r="3" fill="#0EA5E9" filter="url(#output-glow-light)" />
+</svg>
